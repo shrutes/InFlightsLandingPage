@@ -1,0 +1,115 @@
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+button {
+  border: 0;
+}
+img {
+  width: 100%;
+}
+.header {
+  background-color: #ffffff;
+  height: 4.5rem;
+  width: 100%;
+  z-index: 5;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 1.13rem;
+  height: 2.5rem;
+  width: 5.7rem;
+}
+
+.hamburger-menu {
+  height: 1.25rem;
+  margin-right: 1.25rem;
+  width: 2rem;
+}
+.menu {
+  display: none;
+}
+
+.intro {
+  padding-top: 7rem;
+}
+
+.intro__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 6.8%;
+  color: #192024;
+  padding-bottom: 2rem;
+  h1 {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  h2 {
+    padding-top: .5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+    line-height: 1.375rem;
+  }
+}
+
+.image-container {
+  position: relative;
+}
+.intro__signup_button {
+  background: #36474F;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: absolute;
+  padding: 0.69rem 2.56rem;
+  bottom: 2.4rem;
+  right: 1.31rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.pilot {
+  padding-top: 2rem;
+}
+.pilot__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 6.8%;
+  h2 {
+    font-size: 1.5rem;
+    color: #192024;
+  }
+  p {
+    padding-top: .5rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    a {
+      text-decoration: none;
+      color: #36474F;
+      font-weight: 400;
+    }
+  }
+}
+
+.pilot__image {
+  width: 50%;
+  margin: 2.88rem auto 3rem auto;
+}
+
+.pilot__button {
+  width: 100%;
+  background: #36474F;
+  padding: 1rem 0;
+  font-size: 1.125rem;
+  color: #FFFFFF;
+  font-weight: 400;
+}
+
+.process
