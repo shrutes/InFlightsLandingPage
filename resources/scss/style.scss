@@ -1,3 +1,16 @@
+$break-small: 470px;
+$break-large: 960px;
+
+@mixin mq($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
+
 html, body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -14,35 +27,66 @@ a {
   text-decoration: none;
 }
 
+.container {
+  width: 100%;
+  @include mq(desktop) {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
 .header {
   background-color: #ffffff;
   height: 4.5rem;
-  width: 100%;
   z-index: 5;
   position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  @include mq(desktop) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: static;
+  }
 }
 
 .logo {
   margin-left: 1.13rem;
   height: 2.5rem;
   width: 5.7rem;
+  @include mq(desktop) {
+    width: 7rem;
+  }
 }
 
 .hamburger-menu {
   height: 1.25rem;
   margin-right: 1.25rem;
   width: 2rem;
+  @include mq(desktop) {
+    display: none;
+  }
 }
 .menu {
   display: none;
+  @include mq(desktop) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.menu__item {
+    padding: 0rem 1rem;
 }
 
 .intro {
   padding-top: 7rem;
+  @include mq(desktop) {
+    padding: 0;
+    height: 26.88rem;
+  }
 }
 
 .intro__text {
@@ -62,12 +106,25 @@ a {
     font-size: 1rem;
     letter-spacing: 0.3px;
     line-height: 1.375rem;
+    width: 91%;
+  }
+  @include mq(desktop) {
+    margin: 0;
+    width: 34.7%;
+    background: white;
+    position: absolute;
+    z-index: 5;
+    top: 9.63rem;
+    left: 11.25rem;
+    padding-left: 1.5rem;
+    padding-top: 1.38rem;
   }
 }
 
 .image-container {
   position: relative;
 }
+
 .intro__signup_button {
   background: #36474F;
   color: #ffffff;
@@ -78,15 +135,31 @@ a {
   right: 1.31rem;
   font-size: 0.875rem;
   font-weight: 400;
+
+  @include mq(desktop) {
+    width: 20%;
+    bottom: 4.19rem;
+    left: 11.25rem;
+    font-size: 1rem;
+    line-height: 1.31rem;
+    padding:.94rem auto;
+  }
 }
 .pilot {
   padding-top: 2rem;
+  @include mq(desktop) {
+    padding-top: 10rem;
+  }
 }
 .pilot__text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 0 6.8%;
+  @include mq(desktop) {
+    width: 41%;
+    top: 5.19rem;
+  }
   h2 {
     font-size: 1.5rem;
     color: #192024;
@@ -129,6 +202,10 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include mq(desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .process__step {
@@ -205,6 +282,11 @@ a {
 
 .team__members {
   margin: 2.5rem 5% 1.5rem 5%;
+  @include mq(desktop) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 .team__text {
@@ -225,12 +307,94 @@ a {
 .team__member_bio {
   font-size: 1rem;
   padding-top: .75rem;
-  padding-right: 1.75rem;
+  padding-right: 2rem;
   font-weight: 300;
-  line-height: 1.31rem;
+  line-height: 1.5rem;
   a {
     font-size: 1rem;
     color: #36474F;
-    line-height: 1.31rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+  }
+}
+
+.services {
+   align-self: center;
+    form {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 1rem;
+     input {
+       color: #36474F;
+       font-family: "Roboto";
+       font-size: 1rem;
+       font-weight: 400;
+       line-height: 1.31rem;
+       height: 3rem;
+       padding-left: .75rem;
+       border-radius: .13rem;
+       border: .06rem;
+       border-style: solid;
+       width: 88%;
+     &:focus {
+       border-style: none;
+       border: 1;
+      }
+   }
+    .services__form_button {
+     width: 100%;
+     background: #36474F;
+     padding: 1rem 0;
+     margin-top: 1rem;
+     font-size: 1.13rem;
+     text-transform: uppercase;
+     line-height: 1.31rem;
+     color: #FFFFFF;
+     font-weight: 400;
+     &:focus {
+       border-style: none;
+       opacity: 40%;
+      }
+   }
+   }
+   .mobile-map {
+     margin: 1.5rem .88rem;
+     width:90%;
+   }
+}
+
+.services__title {
+  color: #36474F;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 2.69rem;
+  text-align: center;
+  margin: 0 auto 1.5rem auto;
+}
+
+.services__subtitle {
+  color: #192024;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.31rem;
+  text-align: center;
+  padding-bottom: 1.31rem;
+}
+
+
+
+.footer {
+  width: 100%;
+  height: 2.25rem;
+  background-color: #EFF1F3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .copyright {
+    color: #192024;
+    font-size: .5rem;
+    line-height: .63rem;
+    font-weight: 300;
   }
 }

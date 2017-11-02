@@ -13,7 +13,7 @@
   <title>InFlights</title>
 </head>
 <body>
-  <div class="header">
+  <div class="header container">
     <div class="logo">
       <img src="./resources/assets/Inflights_Logo_V2.png">
     </div>
@@ -34,16 +34,22 @@
     <div class="intro__text">
       <h1>Get a closer look</h1>
       <h2>Use Inflights drone flight network to get detailed insights and analytics
-        on large developement sites</h2>
+        on large development sites</h2>
       </div>
       <div class="image-container">
-        <img class"intro__image" src="resources/assets/inflights_intro_img.png">
+        <picture>
+          <source
+          media="(min-width: 650px)"
+          srcset="resources/assets/inflights_intro_img_large.png">
+          <img class"intro__img" src="resources/assets/inflights_intro_img.png"
+          alt="drone image">
+        </picture>
         <button type="button" class="intro__signup_button">
           Sign Up Today
         </button>
       </div>
     </div>
-    <div class="pilot">
+    <div class="pilot container">
       <div class="pilot__text">
         <h2>We find your pilots</h2>
         <p>InFlights only works with expert operators who carry state-of-the-art equipment.
@@ -56,7 +62,7 @@
       </div>
       <button type="button" name="button" class="pilot__button">Become a pilot</button>
     </div>
-    <div class="process">
+    <div class="process container">
       <h2 class="process__title">How it works</h2>
       <div class="process__steps">
         <div class="process__step">
@@ -73,7 +79,7 @@
         </div>
       </div>
     </div>
-    <div class="benefit">
+    <div class="benefit container">
       <h2 class="benefit__title">Benefits We Offer</h2>
       <div class="benefit__text">
         <h3>Inspect the unreachable</h3>
@@ -119,6 +125,26 @@
                       </div>
                     </div>
                   </div>
+                </div>
+                <div class="services container">
+                  <h2 class="services__title">Interested in our </br> services?</h2>
+                  <h3 class="services__subtitle">Contact us with questions</h3>
+                <div class=services__elements>
+                  <form>
+                    <input type="text" name="name" placeholder="Name"><br>
+                    <input type="text" name="emailaddress" placeholder="Email address"><br>
+                    <input type="text" name="phonenumber"  placeholder="Phone number"><br>
+                    <input type="text" name="description"  placeholder="How can InFlights help you?"><br>
+                  <button type="button" class="services__form_button">
+                    Submit
+                  </button>
+                  </form>
+                </div>
+                <img class="mobile-map" src="resources/assets/mobile_map.png">
+              </div>
+                <div class="footer">
+                  <span class="copyright">InFlights bvba, Gierstraat 6, 2000 Antwerp, Belgium — InFlights &copy; 2017</span>
+                </div>
                 </div>
               </body>
               </html>
