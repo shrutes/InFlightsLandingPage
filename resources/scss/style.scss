@@ -9,6 +9,11 @@ button {
 img {
   width: 100%;
 }
+
+a {
+  text-decoration: none;
+}
+
 .header {
   background-color: #ffffff;
   height: 4.5rem;
@@ -91,7 +96,6 @@ img {
     font-weight: 300;
     line-height: 1.5rem;
     a {
-      text-decoration: none;
       color: #36474F;
       font-weight: 400;
     }
@@ -112,4 +116,121 @@ img {
   font-weight: 400;
 }
 
-.process
+.process__title {
+  color: #5F6C73;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 5rem auto 0 auto;
+  text-align: center;
+}
+
+.process__steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.process__step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 55%;
+  margin-top: 5rem;
+}
+
+.process__icon {
+}
+
+.process__text {
+  margin-top: 1.5rem;
+  color:#192024;
+  font-weight: 500;
+  line-height: 1.31rem;
+}
+
+.benefit__title {
+  color: #36474F;
+  font-size: 2.25rem;
+  font-weight: 300;
+  margin-top: 3.88rem;
+  text-align: center;
+}
+
+.benefit__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 2.25rem 4rem 0 1.88rem;
+  width: 85%;
+  h3 {
+    color: #192024;
+    font-size: 1.13rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+  }
+  p {
+    color: #192024;
+    font-weight: 300;
+    line-height: 1.31rem;
+    margin-top: .5rem;
+  }
+}
+
+.benefit__link {
+  color: #36474F;
+  font-weight: 400;
+}
+
+.team__title {
+  color: #36474F;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 2.69rem;
+  text-align: center;
+  margin: 3rem auto 1.5rem auto;
+}
+
+.team__subtitle {
+  color: #192024;
+  font-size: 1.13rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.5rem;
+  text-align: center;
+  margin-top: .75rem;
+}
+
+.team__members {
+  margin: 2.5rem 5% 1.5rem 5%;
+}
+
+.team__text {
+  padding-top: 1.5rem;
+  padding-bottom: 2.88rem;
+}
+.team__member_name {
+  font-size: 1.25rem;
+  color: #192024;
+  font-weight: 700;
+}
+
+.team__member_title {
+  font-size: .75rem;
+  color: #192024;
+}
+
+.team__member_bio {
+  font-size: 1rem;
+  padding-top: .75rem;
+  padding-right: 1.75rem;
+  font-weight: 300;
+  line-height: 1.31rem;
+  a {
+    font-size: 1rem;
+    color: #36474F;
+    line-height: 1.31rem;
+  }
+}

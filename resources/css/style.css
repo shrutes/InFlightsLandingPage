@@ -1,45 +1,203 @@
-/*
-Error: Invalid CSS after ".process": expected "{", was ""
-        on line 116 of resources/scss/style.scss
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px; }
 
-111:   color: #FFFFFF;
-112:   font-weight: 400;
-113: }
-114: 
-115: .process
+button {
+  border: 0; }
 
-Backtrace:
-resources/scss/style.scss:116
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:1278:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:1208:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:1203:in `tok!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:677:in `block'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:670:in `ruleset'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:696:in `block_child'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:689:in `block_contents'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:137:in `stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:41:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.3/lib/sass/engine.rb:414:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.3/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.3/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:320:in `block in watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \".process\": expected \"{\", was \"\"\A         on line 116 of resources/scss/style.scss\A \A 111:   color: #FFFFFF;\A 112:   font-weight: 400;\A 113: }\A 114: \A 115: .process"; }
+img {
+  width: 100%; }
+
+a {
+  text-decoration: none; }
+
+.header {
+  background-color: #ffffff;
+  height: 4.5rem;
+  width: 100%;
+  z-index: 5;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+
+.logo {
+  margin-left: 1.13rem;
+  height: 2.5rem;
+  width: 5.7rem; }
+
+.hamburger-menu {
+  height: 1.25rem;
+  margin-right: 1.25rem;
+  width: 2rem; }
+
+.menu {
+  display: none; }
+
+.intro {
+  padding-top: 7rem; }
+
+.intro__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 6.8%;
+  color: #192024;
+  padding-bottom: 2rem; }
+  .intro__text h1 {
+    font-size: 2rem;
+    font-weight: 300; }
+  .intro__text h2 {
+    padding-top: .5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+    line-height: 1.375rem; }
+
+.image-container {
+  position: relative; }
+
+.intro__signup_button {
+  background: #36474F;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: absolute;
+  padding: 0.69rem 2.56rem;
+  bottom: 2.4rem;
+  right: 1.31rem;
+  font-size: 0.875rem;
+  font-weight: 400; }
+
+.pilot {
+  padding-top: 2rem; }
+
+.pilot__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 6.8%; }
+  .pilot__text h2 {
+    font-size: 1.5rem;
+    color: #192024; }
+  .pilot__text p {
+    padding-top: .5rem;
+    font-weight: 300;
+    line-height: 1.5rem; }
+    .pilot__text p a {
+      color: #36474F;
+      font-weight: 400; }
+
+.pilot__image {
+  width: 50%;
+  margin: 2.88rem auto 3rem auto; }
+
+.pilot__button {
+  width: 100%;
+  background: #36474F;
+  padding: 1rem 0;
+  font-size: 1.125rem;
+  color: #FFFFFF;
+  font-weight: 400; }
+
+.process__title {
+  color: #5F6C73;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 5rem auto 0 auto;
+  text-align: center; }
+
+.process__steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.process__step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 55%;
+  margin-top: 5rem; }
+
+.process__text {
+  margin-top: 1.5rem;
+  color: #192024;
+  font-weight: 500;
+  line-height: 1.31rem; }
+
+.benefit__title {
+  color: #36474F;
+  font-size: 2.25rem;
+  font-weight: 300;
+  margin-top: 3.88rem;
+  text-align: center; }
+
+.benefit__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 2.25rem 4rem 0 1.88rem;
+  width: 85%; }
+  .benefit__text h3 {
+    color: #192024;
+    font-size: 1.13rem;
+    font-weight: 700;
+    line-height: 1.5rem; }
+  .benefit__text p {
+    color: #192024;
+    font-weight: 300;
+    line-height: 1.31rem;
+    margin-top: .5rem; }
+
+.benefit__link {
+  color: #36474F;
+  font-weight: 400; }
+
+.team__title {
+  color: #36474F;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 2.69rem;
+  text-align: center;
+  margin: 3rem auto 1.5rem auto; }
+
+.team__subtitle {
+  color: #192024;
+  font-size: 1.13rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.5rem;
+  text-align: center;
+  margin-top: .75rem; }
+
+.team__members {
+  margin: 2.5rem 5% 1.5rem 5%; }
+
+.team__text {
+  padding-top: 1.5rem;
+  padding-bottom: 2.88rem; }
+
+.team__member_name {
+  font-size: 1.25rem;
+  color: #192024;
+  font-weight: 700; }
+
+.team__member_title {
+  font-size: .75rem;
+  color: #192024; }
+
+.team__member_bio {
+  font-size: 1rem;
+  padding-top: .75rem;
+  padding-right: 1.75rem;
+  font-weight: 300;
+  line-height: 1.31rem; }
+  .team__member_bio a {
+    font-size: 1rem;
+    color: #36474F;
+    line-height: 1.31rem; }
+
+/*# sourceMappingURL=style.css.map */
