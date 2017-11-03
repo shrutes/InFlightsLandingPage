@@ -9,7 +9,8 @@ html, body {
   font-size: 16px; }
 
 button {
-  border: 0; }
+  border: 0;
+  font-family: "Roboto"; }
 
 img {
   width: 100%; }
@@ -50,7 +51,8 @@ a {
   width: 5.7rem; }
   @media only screen and (min-width: 960px) {
     .logo {
-      width: 7rem; } }
+      width: 7rem;
+      margin-bottom: 1rem; } }
 
 .hamburger-menu {
   height: 1.25rem;
@@ -66,10 +68,14 @@ a {
     .menu {
       display: flex;
       flex-direction: row;
-      justify-content: space-between; } }
+      justify-content: space-between;
+      align-items: center; } }
 
 .menu__item {
-  padding: 0rem 1rem; }
+  margin: 0rem 1rem; }
+  .menu__item.sign-in {
+    border: 1px solid #36474F;
+    padding: .5rem; }
 
 .intro {
   padding-top: 7rem; }
@@ -110,28 +116,66 @@ a {
 .intro__signup_button {
   background: #36474F;
   color: #ffffff;
-  text-transform: uppercase;
   position: absolute;
   padding: 0.69rem 2.56rem;
   bottom: 2.4rem;
   right: 1.31rem;
   font-size: 0.875rem;
-  font-weight: 400; }
+  font-weight: 300;
+  letter-spacing: .35px; }
   @media only screen and (min-width: 960px) {
     .intro__signup_button {
       width: 20%;
-      bottom: 4.19rem;
+      bottom: 5.19rem;
       left: 14.1%;
       font-size: 1rem;
-      line-height: 1.31rem;
-      padding: .94rem auto; } }
+      line-height: 2rem;
+      letter-spacing: .65px;
+      padding: 3rem auto;
+      font-weight: 400; } }
+
+.pilot__form {
+  padding: 7rem 2.25rem;
+  background-color: #D2D9DC;
+  margin-right: 10rem; }
+  .pilot__form input {
+    z-index: 10;
+    font-family: "Roboto";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.31rem;
+    height: 3rem;
+    padding-left: .75rem;
+    margin-top: .25rem;
+    border: none;
+    width: 21rem; }
+  .pilot__form button {
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    width: 100%;
+    background: #36474F;
+    padding: 1rem 0;
+    margin-top: .5rem; }
+
+.pilot__signup {
+  display: none; }
+  @media only screen and (min-width: 960px) {
+    .pilot__signup {
+      margin-top: -2.5rem;
+      position: relative;
+      z-index: 10;
+      height: 3rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start; } }
 
 .pilot {
   padding-top: 2rem; }
   @media only screen and (min-width: 960px) {
     .pilot {
-      padding-top: 9.5rem;
-      padding-bottom: 4.19rem; } }
+      padding-top: 6.5rem;
+      padding-bottom: 6rem; } }
 
 .pilot__text {
   display: flex;
@@ -157,9 +201,9 @@ a {
   margin: 2.88rem auto 3rem auto; }
   @media only screen and (min-width: 960px) {
     .pilot__img {
-      width: 18%;
+      width: 24%;
       margin: 0 6.8%;
-      padding-top: 4.19rem; } }
+      padding-top: 5.19rem; } }
 
 .pilot__button {
   width: 100%;
@@ -176,7 +220,7 @@ a {
   .process {
     background-color: #F7FAFB;
     margin: 1rem auto;
-    padding: 3rem 0 4.94rem 0; } }
+    padding: 4rem 0 5.5rem 0; } }
 
 .process__title {
   color: #5F6C73;
@@ -211,7 +255,9 @@ a {
 
 @media only screen and (min-width: 960px) {
   .process__icon {
-    width: 55%; } }
+    width: 55%; }
+    .process__icon.process__icon_submit {
+      margin-top: .25rem; } }
 
 .process__text {
   margin-top: 1.5rem;
@@ -290,7 +336,7 @@ a {
       display: block;
       height: 25rem;
       width: 35rem;
-      margin-top: 2rem; } }
+      margin-top: 3rem; } }
 
 .team {
   width: 100%; }
@@ -326,7 +372,6 @@ a {
       margin-bottom: 3.19rem; } }
 
 .team__members {
-  padding: 0 5%;
   margin: 2.5rem auto 1.5rem auto; }
   @media only screen and (min-width: 960px) {
     .team__members {
@@ -335,10 +380,12 @@ a {
       justify-content: space-between;
       margin: 2.5rem auto 1.5rem auto; } }
 
-@media only screen and (min-width: 960px) {
-  .team__member {
-    width: 50%;
-    margin: 5.5% 3rem 5.5%; } }
+.team__member {
+  margin: 4.5% 4.5% auto; }
+  @media only screen and (min-width: 960px) {
+    .team__member {
+      width: 50%;
+      margin: 5.5% 4rem; } }
 
 .team__text {
   padding-top: 1.5rem;
@@ -375,9 +422,8 @@ a {
     margin-top: 1rem; }
     @media only screen and (min-width: 960px) {
       .services form {
-        width: 45%; } }
+        width: 53%; } }
     .services form input {
-      color: #36474F;
       font-family: "Roboto";
       font-size: 1rem;
       font-weight: 400;
@@ -385,9 +431,11 @@ a {
       height: 3rem;
       padding-left: .75rem;
       border-radius: .13rem;
-      border: .06rem;
+      border: 1px;
       border-style: solid;
       width: 88%; }
+      .services form input.text {
+        color: #36474F; }
     .services form .services__form_button {
       width: 100%;
       background: #36474F;
@@ -400,7 +448,8 @@ a {
       font-weight: 400; }
       @media only screen and (min-width: 960px) {
         .services form .services__form_button {
-          width: 88%; } }
+          width: 88%;
+          margin: 0 auto; } }
       .services form .services__form_button:focus {
         opacity: 40%; }
       .services form .services__form_button:active {
@@ -423,7 +472,7 @@ a {
     .services__title {
       font-size: 3.5rem;
       line-height: 4.63rem;
-      margin: 3.88rem auto 1rem auto; } }
+      margin: 5rem auto 1rem auto; } }
 
 .services__subtitle {
   color: #36474F;
@@ -444,18 +493,20 @@ a {
   justify-content: space-between; }
   @media only screen and (min-width: 960px) {
     .services__elements {
-      flex-direction: row-reverse; } }
+      flex-direction: row-reverse;
+      padding-top: 2.5rem;
+      padding-bottom: 7rem; } }
 
 .footer {
   width: 100%;
-  height: 2.25rem;
+  height: 2.75rem;
   background-color: #EFF1F3;
   display: flex;
   justify-content: center;
   align-items: center; }
   @media only screen and (min-width: 960px) {
     .footer {
-      height: 5rem; } }
+      height: 4rem; } }
   .footer .copyright {
     color: #192024;
     font-size: .5rem;

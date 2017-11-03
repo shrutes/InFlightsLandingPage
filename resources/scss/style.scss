@@ -26,6 +26,7 @@ html, body {
 
 button {
   border: 0;
+  font-family: 'Roboto'
 }
 img {
   width: 100%;
@@ -71,6 +72,7 @@ a {
   width: 5.7rem;
   @include mq(desktop) {
     width: 7rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -88,12 +90,19 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
 .menu__item {
-  padding: 0rem 1rem;
+  margin: 0rem 1rem;
+  &.sign-in {
+    border: 1px solid #36474F;
+    padding: .5rem;
+  }
 }
+
+
 
 .intro {
   padding-top: 7rem;
@@ -139,28 +148,73 @@ a {
 .intro__signup_button {
   background: #36474F;
   color: #ffffff;
-  text-transform: uppercase;
   position: absolute;
   padding: 0.69rem 2.56rem;
   bottom: 2.4rem;
   right: 1.31rem;
   font-size: 0.875rem;
-  font-weight: 400;
-
+  font-weight: 300;
+  letter-spacing: .35px;
   @include mq(desktop) {
     width: 20%;
-    bottom: 4.19rem;
+    bottom: 5.19rem;
     left: 14.1%;
     font-size: 1rem;
-    line-height: 1.31rem;
-    padding:.94rem auto;
+    line-height: 2rem;
+    letter-spacing: .65px;
+    padding:3rem auto;
+    font-weight: 400;
   }
 }
+
+.pilot__form {
+  padding: 7rem 2.25rem;
+  background-color: #D2D9DC;
+  margin-right: 10rem;
+  input {
+    z-index: 10;
+    font-family: "Roboto";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.31rem;
+    height: 3rem;
+    padding-left: .75rem;
+    margin-top: .25rem;
+    border: none;
+    width: 21rem;
+}
+   button {
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    width: 100%;
+    background: #36474F;
+    padding: 1rem 0;
+    margin-top: .5rem;
+ }
+}
+
+.pilot__signup {
+  display: none;
+  @include mq(desktop) {
+    margin-top: -2.5rem;
+    position: relative;
+    z-index: 10;
+    height: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+
+  }
+}
+
+
 .pilot {
   padding-top: 2rem;
   @include mq(desktop) {
-    padding-top: 9.5rem;
-    padding-bottom: 4.19rem;
+    padding-top: 6.5rem;
+    padding-bottom: 6rem;
   }
 }
 .pilot__text {
@@ -191,9 +245,9 @@ a {
   width: 50%;
   margin: 2.88rem auto 3rem auto;
   @include mq(desktop) {
-    width: 18%;
+    width: 24%;
     margin: 0 6.8%;
-    padding-top: 4.19rem;
+    padding-top: 5.19rem;
   }
 }
 
@@ -213,7 +267,7 @@ a {
   @include mq(desktop) {
     background-color:  #F7FAFB;
     margin: 1rem auto;
-    padding: 3rem 0 4.94rem 0;
+    padding: 4rem 0 5.5rem 0;
   }
 }
 
@@ -254,6 +308,9 @@ a {
 .process__icon {
   @include mq(desktop) {
     width: 55%;
+    &.process__icon_submit {
+      margin-top: .25rem;
+  }
   }
 }
 
@@ -339,7 +396,7 @@ a {
     display: block;
     height: 25rem;
     width: 35rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 }
 .team {
@@ -378,7 +435,6 @@ a {
 }
 
 .team__members {
-   padding: 0 5%;
    margin: 2.5rem auto 1.5rem auto;
   @include mq(desktop) {
     display: flex;
@@ -389,9 +445,10 @@ a {
 }
 
 .team__member {
+  margin:4.5% 4.5% auto;
   @include mq(desktop) {
     width: 50%;
-    margin:  5.5% 3rem 5.5%
+    margin: 5.5% 4rem;
   }
 }
 .team__text {
@@ -432,10 +489,12 @@ a {
     align-items: center;
     margin-top: 1rem;
     @include mq(desktop) {
-      width: 45%;
+      width: 53%;
     }
     input {
-      color: #36474F;
+      &.text{
+            color: #36474F;
+      }
       font-family: "Roboto";
       font-size: 1rem;
       font-weight: 400;
@@ -443,7 +502,7 @@ a {
       height: 3rem;
       padding-left: .75rem;
       border-radius: .13rem;
-      border: .06rem;
+      border: 1px;
       border-style: solid;
       width: 88%;
 
@@ -460,6 +519,7 @@ a {
       font-weight: 400;
       @include mq(desktop) {
         width: 88%;
+        margin: 0 auto;
       }
       &:focus {
         opacity: 40%;
@@ -488,7 +548,7 @@ a {
   @include mq(desktop) {
     font-size: 3.5rem;
     line-height: 4.63rem;
-    margin: 3.88rem auto 1rem auto;
+    margin: 5rem auto 1rem auto;
   }
 }
 
@@ -513,18 +573,20 @@ a {
   justify-content: space-between;
   @include mq(desktop) {
     flex-direction: row-reverse;
+    padding-top: 2.5rem;
+    padding-bottom: 7rem;
 }
 }
 
 .footer {
   width: 100%;
-  height: 2.25rem;
+  height: 2.75rem;
   background-color: #EFF1F3;
   display: flex;
   justify-content: center;
   align-items: center;
   @include mq(desktop) {
-    height: 5rem;
+    height: 4rem;
   }
   .copyright {
     color: #192024;
