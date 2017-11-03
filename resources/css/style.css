@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box; }
 
+*:focus {
+  outline: 0; }
+
 html, body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px; }
@@ -385,9 +388,6 @@ a {
       border: .06rem;
       border-style: solid;
       width: 88%; }
-      .services form input:focus {
-        border-style: none;
-        border: 1; }
     .services form .services__form_button {
       width: 100%;
       background: #36474F;
@@ -402,7 +402,8 @@ a {
         .services form .services__form_button {
           width: 88%; } }
       .services form .services__form_button:focus {
-        border-style: none;
+        opacity: 40%; }
+      .services form .services__form_button:active {
         opacity: 40%; }
   .services .mobile-map {
     margin: 1.5rem auto;

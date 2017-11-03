@@ -16,6 +16,9 @@ $break-large: 960px;
 * {
   box-sizing: border-box;
 }
+*:focus {
+    outline: 0;
+}
 html, body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -443,10 +446,7 @@ a {
       border: .06rem;
       border-style: solid;
       width: 88%;
-      &:focus {
-        border-style: none;
-        border: 1;
-      }
+
     }
     .services__form_button {
       width: 100%;
@@ -462,7 +462,9 @@ a {
         width: 88%;
       }
       &:focus {
-        border-style: none;
+        opacity: 40%;
+      }
+      &:active {
         opacity: 40%;
       }
     }
