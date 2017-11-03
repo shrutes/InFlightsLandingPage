@@ -5,12 +5,17 @@ $break-large: 960px;
   @if $media == mobile {
     @media only screen and (max-width: $break-small) { @content; }
   }
+  @else if $media == tablet {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
   @else if $media == desktop {
     @media only screen and (min-width: $break-large) { @content; }
   }
 }
 
-
+* {
+  box-sizing: border-box;
+}
 html, body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -25,6 +30,12 @@ img {
 
 a {
   text-decoration: none;
+}
+
+.mobile-linebreak {
+  @include mq(desktop) {
+    display: none;
+}
 }
 
 .container {
@@ -78,14 +89,13 @@ a {
 }
 
 .menu__item {
-    padding: 0rem 1rem;
+  padding: 0rem 1rem;
 }
 
 .intro {
   padding-top: 7rem;
   @include mq(desktop) {
-    padding: 0;
-    height: 26.88rem;
+    padding:0rem;
   }
 }
 
@@ -106,7 +116,6 @@ a {
     font-size: 1rem;
     letter-spacing: 0.3px;
     line-height: 1.375rem;
-    width: 91%;
   }
   @include mq(desktop) {
     margin: 0;
@@ -115,9 +124,8 @@ a {
     position: absolute;
     z-index: 5;
     top: 9.63rem;
-    left: 11.25rem;
-    padding-left: 1.5rem;
-    padding-top: 1.38rem;
+    left: 14.1%;
+    padding: 1.5rem;
   }
 }
 
@@ -139,7 +147,7 @@ a {
   @include mq(desktop) {
     width: 20%;
     bottom: 4.19rem;
-    left: 11.25rem;
+    left: 14.1%;
     font-size: 1rem;
     line-height: 1.31rem;
     padding:.94rem auto;
@@ -148,7 +156,8 @@ a {
 .pilot {
   padding-top: 2rem;
   @include mq(desktop) {
-    padding-top: 10rem;
+    padding-top: 9.5rem;
+    padding-bottom: 4.19rem;
   }
 }
 .pilot__text {
@@ -158,7 +167,6 @@ a {
   margin: 0 6.8%;
   @include mq(desktop) {
     width: 41%;
-    top: 5.19rem;
   }
   h2 {
     font-size: 1.5rem;
@@ -175,9 +183,15 @@ a {
   }
 }
 
-.pilot__image {
+
+.pilot__img {
   width: 50%;
   margin: 2.88rem auto 3rem auto;
+  @include mq(desktop) {
+    width: 18%;
+    margin: 0 6.8%;
+    padding-top: 4.19rem;
+  }
 }
 
 .pilot__button {
@@ -187,6 +201,17 @@ a {
   font-size: 1.125rem;
   color: #FFFFFF;
   font-weight: 400;
+  @include mq(desktop) {
+    display: none;
+  }
+}
+
+.process {
+  @include mq(desktop) {
+    background-color:  #F7FAFB;
+    margin: 1rem auto;
+    padding: 3rem 0 4.94rem 0;
+  }
 }
 
 .process__title {
@@ -195,6 +220,11 @@ a {
   font-weight: 400;
   margin: 5rem auto 0 auto;
   text-align: center;
+  @include mq(desktop) {
+    line-height: 2.69rem;
+    text-align: left;
+    margin: 0 auto;
+  }
 }
 
 .process__steps {
@@ -219,6 +249,9 @@ a {
 }
 
 .process__icon {
+  @include mq(desktop) {
+    width: 55%;
+  }
 }
 
 .process__text {
@@ -234,13 +267,44 @@ a {
   font-weight: 300;
   margin-top: 3.88rem;
   text-align: center;
+  line-height: 3rem;
+  @include mq(desktop) {
+    font-size: 3.5rem;
+    line-height: 4.63rem;
+    margin-top: 6rem;
+    margin-bottom: 3.88rem;
+  }
 }
 
+.benefit__main {
+  display: flex;
+  justify-content: space-around;
+  @include mq(desktop) {
+    margin-bottom: 7.25rem;
+  }
+}
+.benefit__elements {
+  display: flex;
+  flex-direction: column;
+}
+.benefit__element {
+  display: flex;
+  align-items: center;
+  margin: 2.25rem 0 0 1.88rem;
+}
+.benefit__img {
+  display: none;
+  @include mq(desktop) {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    margin-right: 2rem;
+  }
+}
 .benefit__text {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 2.25rem 4rem 0 1.88rem;
   width: 85%;
   h3 {
     color: #192024;
@@ -253,6 +317,11 @@ a {
     font-weight: 300;
     line-height: 1.31rem;
     margin-top: .5rem;
+    @include mq(desktop) {
+      font-size: 1.13rem;
+      width: 65%;
+      line-height: 1.5rem;
+    }
   }
 }
 
@@ -261,6 +330,21 @@ a {
   font-weight: 400;
 }
 
+.benefit__illustration {
+  display: none;
+  @include mq(desktop) {
+    display: block;
+    height: 25rem;
+    width: 35rem;
+    margin-top: 2rem;
+  }
+}
+.team {
+  width: 100%;
+  @include mq(desktop) {
+  background-color: #F7FAFB;
+}
+}
 .team__title {
   color: #36474F;
   font-size: 2rem;
@@ -268,6 +352,11 @@ a {
   line-height: 2.69rem;
   text-align: center;
   margin: 3rem auto 1.5rem auto;
+  @include mq(desktop) {
+    font-size: 3rem;
+    line-height: 4rem;
+    padding-top: 5rem;
+  }
 }
 
 .team__subtitle {
@@ -278,17 +367,30 @@ a {
   line-height: 1.5rem;
   text-align: center;
   margin-top: .75rem;
-}
-
-.team__members {
-  margin: 2.5rem 5% 1.5rem 5%;
   @include mq(desktop) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 3.19rem;
   }
 }
 
+.team__members {
+   padding: 0 5%;
+   margin: 2.5rem auto 1.5rem auto;
+  @include mq(desktop) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2.5rem auto 1.5rem auto;
+  }
+}
+
+.team__member {
+  @include mq(desktop) {
+    width: 50%;
+    margin:  5.5% 3rem 5.5%
+  }
+}
 .team__text {
   padding-top: 1.5rem;
   padding-bottom: 2.88rem;
@@ -319,49 +421,59 @@ a {
 }
 
 .services {
-   align-self: center;
-    form {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     margin-top: 1rem;
-     input {
-       color: #36474F;
-       font-family: "Roboto";
-       font-size: 1rem;
-       font-weight: 400;
-       line-height: 1.31rem;
-       height: 3rem;
-       padding-left: .75rem;
-       border-radius: .13rem;
-       border: .06rem;
-       border-style: solid;
-       width: 88%;
-     &:focus {
-       border-style: none;
-       border: 1;
+  align-self: center;
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    @include mq(desktop) {
+      width: 45%;
+    }
+    input {
+      color: #36474F;
+      font-family: "Roboto";
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.31rem;
+      height: 3rem;
+      padding-left: .75rem;
+      border-radius: .13rem;
+      border: .06rem;
+      border-style: solid;
+      width: 88%;
+      &:focus {
+        border-style: none;
+        border: 1;
       }
-   }
+    }
     .services__form_button {
-     width: 100%;
-     background: #36474F;
-     padding: 1rem 0;
-     margin-top: 1rem;
-     font-size: 1.13rem;
-     text-transform: uppercase;
-     line-height: 1.31rem;
-     color: #FFFFFF;
-     font-weight: 400;
-     &:focus {
-       border-style: none;
-       opacity: 40%;
+      width: 100%;
+      background: #36474F;
+      padding: 1rem 0;
+      margin-top: 1rem;
+      font-size: 1.13rem;
+      text-transform: uppercase;
+      line-height: 1.31rem;
+      color: #FFFFFF;
+      font-weight: 400;
+      @include mq(desktop) {
+        width: 88%;
       }
-   }
-   }
-   .mobile-map {
-     margin: 1.5rem .88rem;
-     width:90%;
-   }
+      &:focus {
+        border-style: none;
+        opacity: 40%;
+      }
+    }
+  }
+  .mobile-map {
+    margin: 1.5rem auto;
+    width:90%;
+    @include mq(desktop) {
+      width: 41.7%;
+    };
+  }
 }
 
 .services__title {
@@ -371,18 +483,36 @@ a {
   line-height: 2.69rem;
   text-align: center;
   margin: 0 auto 1.5rem auto;
+  @include mq(desktop) {
+    font-size: 3.5rem;
+    line-height: 4.63rem;
+    margin: 3.88rem auto 1rem auto;
+  }
 }
 
 .services__subtitle {
-  color: #192024;
+  color: #36474F;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.31rem;
   text-align: center;
   padding-bottom: 1.31rem;
+  @include mq(desktop) {
+    font-size: 1.31rem;
+    line-height: 1.75rem;
+  }
 }
 
 
+.services__elements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  @include mq(desktop) {
+    flex-direction: row-reverse;
+}
+}
 
 .footer {
   width: 100%;
@@ -391,10 +521,17 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  @include mq(desktop) {
+    height: 5rem;
+  }
   .copyright {
     color: #192024;
     font-size: .5rem;
     line-height: .63rem;
     font-weight: 300;
+    @include mq(desktop) {
+      font-size: .88rem;
+      line-height: 1.19rem;
+    }
   }
 }

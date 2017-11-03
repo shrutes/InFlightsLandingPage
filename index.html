@@ -57,55 +57,74 @@
           <a href="#" class="pilot__link">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
         </p>
       </div>
-      <div class="pilot__image">
+      <div class="pilot__img">
         <img src="resources/assets/pilot_img.png" alt="Pilot Silhouette">
       </div>
       <button type="button" name="button" class="pilot__button">Become a pilot</button>
     </div>
-    <div class="process container">
-      <h2 class="process__title">How it works</h2>
-      <div class="process__steps">
-        <div class="process__step">
-          <img class="process__icon" src="resources/assets/process_icon_submit.png" alt="Submit Proposal">
-          <span class="process__text">Submit your file requests</span>
-        </div>
-        <div class="process__step">
-          <img class="process__icon process__icon_updates" src="resources/assets/process_icon_updates.png" alt="Check Updates">
-          <span class="process__text">Check flight status and Inflights updates</span>
-        </div>
-        <div class="process__step">
-          <img class="process__icon" src="resources/assets/process_icon_download.png" alt="Download Files">
-          <span class="process__text">Download your files</span>
+    <div class="process">
+      <div class="container">
+        <h2 class="process__title">How it works</h2>
+        <div class="process__steps container">
+          <div class="process__step">
+            <img class="process__icon" src="resources/assets/process_icon_submit.png" alt="Submit Proposal">
+            <span class="process__text">Submit your</br>flight data</span>
+          </div>
+          <div class="process__step">
+            <img class="process__icon process__icon_updates" src="resources/assets/process_icon_updates.png" alt="Check Updates">
+            <span class="process__text">Check flight status</br> and Inflights updates</span>
+          </div>
+          <div class="process__step">
+            <img class="process__icon" src="resources/assets/process_icon_download.png" alt="Download Files">
+            <span class="process__text">Download your files</span>
+          </div>
         </div>
       </div>
     </div>
     <div class="benefit container">
       <h2 class="benefit__title">Benefits We Offer</h2>
-      <div class="benefit__text">
-        <h3>Inspect the unreachable</h3>
-        <p>Get a bird’s eye view of hard to reach places and scaffolding. Inspect your assets quicker.<br/>
-          <a href="#" class="benefit__link">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-        </div>
-        <div class="benefit__text">
-          <h3>Improve Insulation</h3>
-          <p>Our 2D and 3D thermal precisely spot insulation leaks at reactors, pipes and vessels that are hard to reach.<br/>
-            <a href="#" class="benefit__link">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-          </div>
-          <div class="benefit__text">
-            <h3>Monitor your supply chain</h3>
-            <p>Inventory volumes can be measured easily to optimize your supply chain.<br/>
-              <a href="#" class="benefit__link">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-            </div>
+      <div class="benefit__main">
+        <div class="benefit__elements">
+          <div class="benefit__element">
+            <img class="benefit__img" src="resources/assets/benefit_inspect.png">
             <div class="benefit__text">
-              <h3>Improve solar cell output</h3>
-              <p>Drones can perform rapid and safe inspections of solar panel sites.<br/>
+              <h3>Inspect the unreachable</h3>
+              <p>Get a bird’s eye view of hard to reach places and scaffolding. Inspect your assets quicker.<br/>
                 <a href="#" class="benefit__link">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
               </div>
             </div>
+            <div class="benefit__element">
+              <img class="benefit__img" src="resources/assets/benefit_insulation.png">
+              <div class="benefit__text">
+                <h3>Improve Insulation</h3>
+                <p>Our 2D and 3D thermal precisely spot insulation leaks at reactors, pipes and vessels that are hard to reach.<br/>
+                  <a href="#" class="benefit__link">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                </div>
+              </div>
+              <div class="benefit__element">
+                <img class="benefit__img" src="resources/assets/benefit_monitor.png">
+                <div class="benefit__text">
+                  <h3>Monitor your supply chain</h3>
+                  <p>Inventory volumes can be measured easily to optimize your supply chain.<br/>
+                    <a href="#" class="benefit__link">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+                <div class="benefit__element">
+                  <img class="benefit__img" src="resources/assets/benefit_solar.png">
+                  <div class="benefit__text">
+                    <h3>Improve solar cell output</h3>
+                    <p>Drones can perform rapid and safe inspections of solar panel sites.<br/>
+                      <a href="#" class="benefit__link">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <img class="benefit__illustration" src="resources/assets/benefits_img_large_placeholder.png" alt="">
+              </div>
+            </div>
             <div class="team">
-              <h2 class="team__title">We're here to get</br> you the best results</h2>
+              <h2 class="team__title">We're here to get <br class="mobile-linebreak" />you the best results</h2>
               <h3 class="team__subtitle">Meet the team</h3>
-              <div class="team__members">
+              <div class="team__members container">
                 <div class="team__member">
                   <img class="team__member_img" src="resources/assets/team_member_hugo.png">
                   <div class="team__text">
@@ -127,24 +146,25 @@
                   </div>
                 </div>
                 <div class="services container">
-                  <h2 class="services__title">Interested in our </br> services?</h2>
+                  <h2 class="services__title">Interested in our <br class="mobile-linebreak" />services?</h2>
                   <h3 class="services__subtitle">Contact us with questions</h3>
-                <div class=services__elements>
-                  <form>
-                    <input type="text" name="name" placeholder="Name"><br>
-                    <input type="text" name="emailaddress" placeholder="Email address"><br>
-                    <input type="text" name="phonenumber"  placeholder="Phone number"><br>
-                    <input type="text" name="description"  placeholder="How can InFlights help you?"><br>
-                  <button type="button" class="services__form_button">
-                    Submit
-                  </button>
-                  </form>
+                  <div class="services__elements">
+                    <form>
+                      <input type="text" name="name" placeholder="Name"><br>
+                      <input type="text" name="emailaddress" placeholder="Email address"><br>
+                      <input type="text" name="phonenumber"  placeholder="Phone number"><br>
+                      <input type="text" name="description"  placeholder="How can InFlights help you?"><br>
+                      <button type="button" class="services__form_button">
+                        Submit
+                      </button>
+                    </form>
+                      <img class="mobile-map" src="resources/assets/mobile_map.png">
+                  </div>
+
                 </div>
-                <img class="mobile-map" src="resources/assets/mobile_map.png">
-              </div>
                 <div class="footer">
                   <span class="copyright">InFlights bvba, Gierstraat 6, 2000 Antwerp, Belgium — InFlights &copy; 2017</span>
                 </div>
-                </div>
-              </body>
-              </html>
+              </div>
+            </body>
+            </html>
