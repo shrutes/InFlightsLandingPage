@@ -168,9 +168,6 @@ a {
 }
 
 .pilot__form {
-  padding: 7rem 2.25rem;
-  background-color: #D2D9DC;
-  margin-right: 10rem;
   input {
     z-index: 10;
     font-family: "Roboto";
@@ -197,14 +194,18 @@ a {
 .pilot__signup {
   display: none;
   @include mq(desktop) {
-    margin-top: -2.5rem;
+    margin-top: -10rem;
+    padding: 7rem 2.25rem;
+    background-color: #D2D9DC;
     position: relative;
     z-index: 10;
-    height: 3rem;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-
+    display: block;
+    h2 {
+      font-size: 1.31rem;
+      text-align: center;
+      color: #36474F;
+      margin-bottom: 1.35rem;
+    }
 
   }
 }
@@ -215,6 +216,16 @@ a {
   @include mq(desktop) {
     padding-top: 6.5rem;
     padding-bottom: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.pilot__main {
+  @include mq(desktop) {
+    width: 45%;
   }
 }
 .pilot__text {
@@ -222,9 +233,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   margin: 0 6.8%;
-  @include mq(desktop) {
-    width: 41%;
-  }
+
   h2 {
     font-size: 1.5rem;
     color: #192024;
@@ -245,7 +254,7 @@ a {
   width: 50%;
   margin: 2.88rem auto 3rem auto;
   @include mq(desktop) {
-    width: 24%;
+    width: 40%;
     margin: 0 6.8%;
     padding-top: 5.19rem;
   }
