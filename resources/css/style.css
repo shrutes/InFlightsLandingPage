@@ -434,6 +434,7 @@ h3 {
 h2 {
   font-size: 2rem;
   font-weight: 300;
+  line-height: 2.25rem;
   color: #36474F; }
   @media only screen and (min-width: 960px) {
     h2 {
@@ -457,7 +458,9 @@ input {
   height: 3rem;
   padding-left: .75rem;
   border-radius: .13rem;
-  border: 1px solid; }
+  border: 1px solid;
+  margin-bottom: .75rem;
+  display: block; }
 
 button {
   font-weight: 400;
@@ -552,13 +555,45 @@ img {
   @media only screen and (min-width: 960px) {
     .intro__text {
       margin: 0;
-      width: 34.7%;
-      background: #FFFFFF;
+      width: 46%;
       position: absolute;
       z-index: 5;
-      top: 9.63rem;
-      left: 45%;
-      padding: 1.5rem; } }
+      top: 25%;
+      left: 45%; }
+      .intro__text h1 {
+        font-size: 3rem;
+        padding-bottom: .3rem;
+        line-height: 2.25rem;
+        color: #192024; }
+      .intro__text p {
+        font-size: 1.125rem;
+        font-weight: 400;
+        line-height: 1.31rem;
+        color: #192024; } }
+  @media only screen and (min-width: 1024px) {
+    .intro__text {
+      width: 43%;
+      top: 28%; }
+      .intro__text h1 {
+        font-size: 3rem;
+        padding-bottom: .3rem;
+        line-height: 2.25rem;
+        color: #192024; }
+      .intro__text p {
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.75rem;
+        color: #192024; } }
+  @media only screen and (min-width: 1280px) {
+    .intro__text {
+      width: 42%;
+      top: 32%; }
+      .intro__text h1 {
+        font-size: 4.25rem;
+        padding-bottom: 1rem; }
+      .intro__text p {
+        font-size: 1.5rem;
+        line-height: 2rem; } }
 
 .image-container {
   position: relative; }
@@ -566,20 +601,30 @@ img {
 .intro__signup_button {
   width: auto;
   position: absolute;
-  padding: 0.69rem 2.56rem;
+  padding: .75rem 1.5rem;
   bottom: 2.4rem;
   right: 1.31rem;
   letter-spacing: 0.04rem; }
   @media only screen and (min-width: 960px) {
     .intro__signup_button {
       width: 20%;
-      bottom: 16%;
+      bottom: 20%;
       left: 45%;
-      width: 21rem; } }
+      width: 21rem;
+      padding: 1rem 1.75rem; } }
+  @media only screen and (min-width: 1024px) {
+    .intro__signup_button {
+      bottom: 25%; } }
+  @media only screen and (min-width: 1280px) {
+    .intro__signup_button {
+      padding: 1.25rem 2.5rem;
+      bottom: 23%; } }
 
-@media only screen and (min-width: 960px) {
-  .process {
-    padding: 4rem 0 10rem 0; } }
+.process {
+  padding-bottom: 5rem; }
+  @media only screen and (min-width: 960px) {
+    .process {
+      padding: 8rem 0 12rem 0; } }
 
 .process__title {
   font-size: 2rem;
@@ -622,14 +667,36 @@ img {
   font-weight: 500;
   line-height: 1.31rem; }
 
-.pilot__form input {
-  padding-left: .75rem;
-  margin-top: .25rem;
-  border: none;
-  width: 21rem; }
-.pilot__form button {
-  padding: 1rem 0;
-  margin-top: .5rem; }
+.pilot {
+  background-color: #F7FAFB;
+  padding-top: 5rem;
+  padding-right: 1rem; }
+  @media only screen and (min-width: 960px) {
+    .pilot {
+      padding-top: 6.5rem;
+      padding-right: 0;
+      padding-bottom: 6rem; } }
+
+@media only screen and (min-width: 960px) {
+  .pilot__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; } }
+
+@media only screen and (min-width: 960px) {
+  .pilot__main {
+    width: 45%; } }
+
+.pilot__form {
+  margin-bottom: 1.35rem; }
+  .pilot__form input {
+    border: none;
+    width: 21rem;
+    margin-bottom: .4rem; }
+  .pilot__form button {
+    padding: 1rem 0;
+    margin-top: .5rem; }
 
 .pilot__signup {
   display: none; }
@@ -647,32 +714,11 @@ img {
         text-align: center;
         margin-bottom: 2.35rem; } }
 
-.pilot__form {
-  margin-bottom: 1.35rem; }
-
 .pilot__member-link {
   display: block;
+  font-weight: 400;
   text-decoration: underline;
   text-align: center; }
-
-.pilot {
-  background-color: #F7FAFB;
-  padding-top: 2rem; }
-  @media only screen and (min-width: 960px) {
-    .pilot {
-      padding-top: 6.5rem;
-      padding-bottom: 6rem; } }
-
-@media only screen and (min-width: 960px) {
-  .pilot__wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start; } }
-
-@media only screen and (min-width: 960px) {
-  .pilot__main {
-    width: 45%; } }
 
 .pilot__text {
   display: flex;
@@ -681,7 +727,8 @@ img {
   margin: 0 6.8%; }
   .pilot__text h2 {
     font-size: 1.5rem;
-    font-weight: 700; }
+    font-weight: 700;
+    color: #192024; }
   .pilot__text p {
     padding-top: .5rem; }
 
@@ -747,10 +794,6 @@ img {
       .benefit__text p {
         width: 65%; } }
 
-.benefit__link {
-  color: #192024;
-  font-weight: 400; }
-
 .benefit__illustration {
   display: none; }
   @media only screen and (min-width: 960px) {
@@ -783,14 +826,11 @@ img {
   line-height: 1.5rem;
   color: #192024;
   text-transform: uppercase;
-  text-align: center;
-  margin-top: .75rem; }
+  text-align: center; }
   @media only screen and (min-width: 960px) {
     .team__subtitle {
       font-size: 1.5rem;
-      line-height: 1.75rem;
-      margin-bottom: 3rem;
-      margin-top: 3rem; } }
+      line-height: 1.75rem; } }
 
 .team__members {
   margin: 2.5rem auto 1.5rem auto; }
@@ -799,7 +839,7 @@ img {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      margin: 2.5rem auto 1.5rem auto; } }
+      margin: 1rem auto 1.5rem auto; } }
 
 .team__member {
   margin: 4.5% 4.5% auto; }
@@ -813,6 +853,7 @@ img {
   padding-bottom: 2.88rem; }
 
 .team__member_name {
+  font-size: 1.5rem;
   font-weight: 700; }
 
 .team__member_title {
@@ -861,11 +902,11 @@ img {
   @media only screen and (min-width: 960px) {
     .services__title {
       font-size: 3.5rem;
-      margin: 5rem auto 1rem auto; } }
+      margin: 5rem auto 2rem auto; } }
 
 .services__subtitle {
-  font-size: 0.875rem;
   font-weight: 500;
+  color: #36474F;
   text-align: center;
   padding-bottom: 1.31rem; }
 

@@ -16,19 +16,19 @@ body {
   font-size: $font-size-base;
   color: $text-black;
   line-height: $line-height-medium;
-  @include mq(desktop) {
-    font-size: $font-size-base-desktop;
+  @include mq(tablet_landscape) {
+    font-size: $font-size-base-laptop;
   }
 }
 
 h1 {
-  font-size: $font-size-large-desktop;
+  font-size: $font-size-large-laptop;
   font-weight: $font-weight-light;
   margin: .5rem 0;
 }
 
 h3 {
-  font-size: $font-size-base-desktop;
+  font-size: $font-size-base-laptop;
   font-weight: $font-weight-bold;
   line-height: $line-height-large;
 }
@@ -36,8 +36,9 @@ h3 {
 h2 {
   font-size: $font-size-large;
   font-weight: $font-weight-light;
+  line-height: $line-height-title;
   color: $text-blue;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
   font-size: $font-size-xlarge;
   }
 }
@@ -45,7 +46,7 @@ h2 {
 p {
   font-weight: $font-weight-light;
   color: $text-black;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     line-height: $line-height-large;
     }
 }
@@ -63,7 +64,8 @@ input {
   padding-left: .75rem;
   border-radius: .13rem;
   border: 1px solid;
-
+  margin-bottom: .75rem;
+  display: block;
 }
 
 button {
@@ -80,14 +82,14 @@ img {
 
 .container {
   width: 100%;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     width: 960px;
     margin: 0 auto;
   }
 }
 
 .mobile-only {
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     display: none;
 }
 }

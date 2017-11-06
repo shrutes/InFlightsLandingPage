@@ -1,6 +1,8 @@
 //breakpoints
 $break-small: 470px;
-$break-large: 960px;
+$break-medium: 960px;
+$break-standard: 1024px;
+$break-large: 1280px;
 // colors
 // background
 $white: #FFFFFF;
@@ -24,11 +26,11 @@ $primary-font: 'Roboto', sans-serif;
 $font-size-base: 1rem;
 $font-size-large: 2rem;
 
-// font-size desktop
-$font-size-base-desktop: 1.125rem;
+// font-size laptop
+$font-size-base-laptop: 1.125rem;
 $font-size-small: .875rem;
 $font-size-medium: 1.5rem;
-$font-size-large-desktop: 2.5rem;
+$font-size-large-laptop: 2.5rem;
 $font-size-xlarge: 3.5rem;
 
 // font-weight
@@ -38,10 +40,11 @@ $font-weight-medium: 500;
 $font-weight-bold: 700;
 
 // line-height/font leading
+$line-height-title: 2.25rem;
 $line-height-xlarge: 1.75rem;
 $line-height-large: 1.5rem;
 $line-height-medium: 1.31rem;
-$line-height-small: 1.13rem;
+$line-height-small: 1.125rem;
 // letter-spacing/kerning
 $spacing-small: .02rem;
 $spacing-medium: .04rem;

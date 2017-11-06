@@ -11,7 +11,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -23,7 +23,7 @@
   margin-left: 1.13rem;
   height: 2.5rem;
   width: 5.7rem;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     width: 7rem;
     margin-bottom: 1rem;
   }
@@ -33,13 +33,13 @@
   height: 1.25rem;
   margin-right: 1.25rem;
   width: 2rem;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     display: none;
   }
 }
 .menu {
   display: none;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -57,7 +57,7 @@
 
 .intro {
   padding-top: 7rem;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     padding:0rem;
   }
 }
@@ -79,15 +79,53 @@
     letter-spacing: 0.3px;
     line-height: 1.375rem;
   }
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     margin: 0;
-    width: 34.7%;
-    background: $white;
+    width: 46%;
     position: absolute;
     z-index: 5;
-    top: 9.63rem;
+    top: 25%;
     left: 45%;
-    padding: 1.5rem;
+    h1 {
+      font-size: 3rem;
+      padding-bottom: .3rem;
+      line-height: $line-height-title;
+      color: $text-black;
+    }
+    p {
+      font-size: $font-size-base-laptop;
+      font-weight: $font-weight-regular;
+      line-height: $line-height-medium;
+      color: $text-black;
+    }
+  }
+  @include mq(laptop) {
+    width: 43%;
+    top: 28%;
+    h1 {
+      font-size: 3rem;
+      padding-bottom: .3rem;
+      line-height: $line-height-title;
+      color: $text-black;
+    }
+    p {
+      font-size: 1.25rem;
+      font-weight: $font-weight-regular;
+      line-height: 1.75rem;
+      color: $text-black;
+    }
+  };
+  @include mq(desktop) {
+    width: 42%;
+    top: 32%;
+    h1 {
+      font-size: 4.25rem;
+      padding-bottom: 1rem;
+    }
+    p {
+      font-size: $font-size-medium;
+      line-height: 2rem;
+    }
   }
 }
 
@@ -98,21 +136,30 @@
 .intro__signup_button {
   width: auto;
   position: absolute;
-  padding: 0.69rem 2.56rem;
+  padding: .75rem 1.5rem;
   bottom: 2.4rem;
   right: 1.31rem;
   letter-spacing: $spacing-medium;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     width: 20%;
-    bottom: 16%;
+    bottom: 20%;
     left: 45%;
     width:21rem;
+    padding: 1rem 1.75rem;
+  }
+  @include mq(laptop) {
+    bottom: 25%;
+  };
+  @include mq(desktop) {
+    padding: 1.25rem 2.5rem;
+    bottom: 23%;
   }
 }
 
 .process {
-  @include mq(desktop) {
-    padding: 4rem 0 10rem 0;
+  padding-bottom: 5rem;
+  @include mq(tablet_landscape) {
+    padding: 8rem 0 12rem 0;
   }
 }
 
@@ -121,7 +168,7 @@
   font-weight: $font-weight-regular;
   margin: 5rem auto 0 auto;
   text-align: center;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     text-align: left;
     margin: 0 auto;
   }
@@ -132,7 +179,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -149,7 +196,7 @@
 }
 
 .process__icon {
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     width: 55%;
     &.process__icon_submit {
       margin-top: .25rem;
@@ -164,12 +211,37 @@
   line-height: $line-height-medium;
 }
 
+.pilot {
+  background-color:  $lightgray;
+  padding-top: 5rem;
+  padding-right: 1rem;
+  @include mq(tablet_landscape) {
+    padding-top: 6.5rem;
+    padding-right: 0;
+    padding-bottom: 6rem;
+  }
+}
+
+.pilot__wrapper {
+  @include mq(tablet_landscape) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.pilot__main {
+  @include mq(tablet_landscape) {
+    width: 45%;
+  }
+}
 .pilot__form {
+  margin-bottom: 1.35rem;
   input {
-    padding-left: .75rem;
-    margin-top: .25rem;
     border: none;
     width: 21rem;
+    margin-bottom: .4rem;
   }
   button {
     padding: 1rem 0;
@@ -179,7 +251,7 @@
 
 .pilot__signup {
   display: none;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     margin-top: -9rem;
     padding: 4rem 2.25rem 4.5rem 2.25rem;
     background-color: $mediumgray;
@@ -195,38 +267,13 @@
   }
 }
 
-.pilot__form {
-  margin-bottom: 1.35rem;
-}
 .pilot__member-link {
   display: block;
+  font-weight: $font-weight-regular;
   text-decoration: underline;
   text-align: center;
 }
 
-.pilot {
-  background-color:  $lightgray;
-  padding-top: 2rem;
-  @include mq(desktop) {
-    padding-top: 6.5rem;
-    padding-bottom: 6rem;
-  }
-}
-
-.pilot__wrapper {
-  @include mq(desktop) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-}
-
-.pilot__main {
-  @include mq(desktop) {
-    width: 45%;
-  }
-}
 .pilot__text {
   display: flex;
   flex-direction: column;
@@ -235,6 +282,7 @@
   h2 {
     font-size: $font-size-medium;
     font-weight: $font-weight-bold;
+    color: $text-black;
   }
   p {
     padding-top: .5rem;
@@ -244,7 +292,7 @@
 .pilot__img {
   width: 50%;
   margin: 2.88rem auto 3rem auto;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     width: 40%;
     margin: 0 6.8%;
     padding-top: 5.19rem;
@@ -254,7 +302,7 @@
 .pilot__button {
   width: 100%;
   padding: 1rem 0;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     display: none;
   }
 }
@@ -263,7 +311,7 @@
   font-size: $font-size-large;
   margin-top: 3.88rem;
   text-align: center;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     font-size: $font-size-xlarge;
     margin-top: 6rem;
     margin-bottom: 3.88rem;
@@ -273,7 +321,7 @@
 .benefit__main {
   display: flex;
   justify-content: space-around;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     margin-bottom: 7.25rem;
   }
 }
@@ -288,7 +336,7 @@
 }
 .benefit__img {
   display: none;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     display: block;
     width: 5rem;
     height: 5rem;
@@ -302,20 +350,15 @@
   width: 85%;
   p {
     margin-top: .5rem;
-    @include mq(desktop) {
+    @include mq(tablet_landscape) {
       width: 65%;
     }
   }
 }
 
-.benefit__link {
-  color: $text-black;
-  font-weight: 400;
-}
-
 .benefit__illustration {
   display: none;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     display: block;
     height: 20rem;
     width: 20rem;
@@ -324,7 +367,7 @@
 }
 .team {
   width: 100%;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     background-color: $lightgray;
   }
 }
@@ -334,41 +377,38 @@
   font-weight: $font-weight-light;
   text-align: center;
   margin: 3rem auto 1.5rem auto;
-  @include mq(desktop) {
-    font-size: $font-size-large-desktop;
+  @include mq(tablet_landscape) {
+    font-size: $font-size-large-laptop;
     padding-top: 5rem;
   }
 }
 
 .team__subtitle {
-  font-size: $font-size-base-desktop;
+  font-size: $font-size-base-laptop;
   font-weight: $font-weight-bold;
   line-height: $line-height-large;
   color: $text-black;
   text-transform: uppercase;
   text-align: center;
-  margin-top: .75rem;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     font-size: $font-size-medium;
     line-height: $line-height-xlarge;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
   }
 }
 
 .team__members {
   margin: 2.5rem auto 1.5rem auto;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 2.5rem auto 1.5rem auto;
+    margin: 1rem auto 1.5rem auto;
   }
 }
 
 .team__member {
   margin:4.5% 4.5% auto;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     width: 50%;
     margin: 5.5% 4rem;
   }
@@ -378,6 +418,7 @@
   padding-bottom: 2.88rem;
 }
 .team__member_name {
+  font-size: $font-size-medium;
   font-weight: $font-weight-bold;
 }
 
@@ -398,7 +439,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 1rem;
-    @include mq(desktop) {
+    @include mq(tablet_landscape) {
       width: 53%;
     }
     input {
@@ -408,7 +449,7 @@
       width: 100%;
       padding: 1rem 0;
       margin-top: 1rem;
-      @include mq(desktop) {
+      @include mq(tablet_landscape) {
         width: 88%;
         margin: 0 auto;
       }
@@ -423,7 +464,7 @@
   .mobile-map {
     margin: 1.5rem auto;
     width:90%;
-    @include mq(desktop) {
+    @include mq(tablet_landscape) {
       width: 41.7%;
     };
   }
@@ -433,15 +474,15 @@
   font-size: $font-size-large;
   text-align: center;
   margin: 0 auto 1.5rem auto;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     font-size: $font-size-xlarge;
-    margin: 5rem auto 1rem auto;
+    margin: 5rem auto 2rem auto;
   }
 }
 
 .services__subtitle {
-  font-size: $font-size-small;
   font-weight: $font-weight-medium;
+  color: $text-blue;
   text-align: center;
   padding-bottom: 1.31rem;
 }
@@ -452,7 +493,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     flex-direction: row-reverse;
     padding-top: 2.5rem;
     padding-bottom: 7rem;
@@ -466,13 +507,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  @include mq(desktop) {
+  @include mq(tablet_landscape) {
     height: 4rem;
   }
   .copyright {
     font-size: .5rem;
     font-weight: 300;
-    @include mq(desktop) {
+    @include mq(tablet_landscape) {
       font-size: $font-size-small;
     }
   }
