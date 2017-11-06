@@ -1,0 +1,58 @@
+.benefit__title {
+  font-size: $font-size-large;
+  margin-top: 3.88rem;
+  text-align: center;
+  @include mq(tablet_landscape) {
+    font-size: $font-size-xlarge;
+    margin-top: 6rem;
+    margin-bottom: 3.88rem;
+  }
+}
+
+.benefit__main {
+  display: flex;
+  justify-content: space-around;
+  @include mq(tablet_landscape) {
+    margin-bottom: 7.25rem;
+  }
+}
+.benefit__elements {
+  display: flex;
+  flex-direction: column;
+}
+.benefit__element {
+  display: flex;
+  align-items: center;
+  margin: 2.25rem 0 0 1.88rem;
+}
+.benefit__img {
+  display: none;
+  @include mq(tablet_landscape) {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    margin-right: 2rem;
+  }
+}
+.benefit__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 85%;
+  p {
+    margin-top: .5rem;
+    @include mq(tablet_landscape) {
+      width: 65%;
+    }
+  }
+}
+
+.benefit__illustration {
+  display: none;
+  @include mq(tablet_landscape) {
+    display: block;
+    height: 20rem;
+    width: 20rem;
+    margin-top: 3rem;
+  }
+}

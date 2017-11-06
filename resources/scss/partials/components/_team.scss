@@ -1,0 +1,65 @@
+.team {
+  width: 100%;
+  @include mq(tablet_landscape) {
+    background-color: $lightgray;
+  }
+}
+.team__title {
+  color: $text-black;
+  font-size: $font-size-large;
+  font-weight: $font-weight-light;
+  text-align: center;
+  margin: 3rem auto 1.5rem auto;
+  @include mq(tablet_landscape) {
+    font-size: $font-size-large-laptop;
+    padding-top: 5rem;
+  }
+}
+
+.team__subtitle {
+  font-size: $font-size-base-laptop;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-large;
+  color: $text-black;
+  text-transform: uppercase;
+  text-align: center;
+  @include mq(tablet_landscape) {
+    font-size: $font-size-medium;
+    line-height: $line-height-xlarge;
+  }
+}
+
+.team__members {
+  margin: 2.5rem auto 1.5rem auto;
+  @include mq(tablet_landscape) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem auto 1.5rem auto;
+  }
+}
+
+.team__member {
+  margin:4.5% 4.5% auto;
+  @include mq(tablet_landscape) {
+    width: 50%;
+    margin: 5.5% 4rem;
+  }
+}
+.team__text {
+  padding-top: 1.5rem;
+  padding-bottom: 2.88rem;
+}
+.team__member_name {
+  font-size: $font-size-medium;
+  font-weight: $font-weight-bold;
+}
+
+.team__member_title {
+  font-size: .75rem;
+}
+
+.team__member_bio {
+  padding-top: .75rem;
+  padding-right: 2rem;
+}

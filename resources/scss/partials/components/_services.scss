@@ -1,0 +1,68 @@
+.services {
+  align-self: center;
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    @include mq(tablet_landscape) {
+      width: 53%;
+    }
+    input {
+      width: 88%;
+    }
+    .services__form_button {
+      width: 100%;
+      padding: 1rem 0;
+      margin-top: 1rem;
+      @include mq(tablet_landscape) {
+        width: 88%;
+        margin: 0 auto;
+      }
+      &:focus {
+        opacity: 40%;
+      }
+      &:active {
+        opacity: 40%;
+      }
+    }
+  }
+  .mobile-map {
+    margin: 1.5rem auto;
+    width:90%;
+    @include mq(tablet_landscape) {
+      width: 41.7%;
+    };
+  }
+}
+
+.services__title {
+  font-size: $font-size-large;
+  text-align: center;
+  margin: 0 auto 1.5rem auto;
+  @include mq(tablet_landscape) {
+    font-size: $font-size-xlarge;
+    margin: 5rem auto 2rem auto;
+  }
+}
+
+.services__subtitle {
+  font-weight: $font-weight-medium;
+  color: $text-blue;
+  text-align: center;
+  padding-bottom: 1.31rem;
+}
+
+
+.services__elements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  @include mq(tablet_landscape) {
+    flex-direction: row-reverse;
+    padding-top: 2.5rem;
+    padding-bottom: 7rem;
+  }
+}

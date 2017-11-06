@@ -1,0 +1,52 @@
+.header {
+  background-color: $white;
+  height: 4.5rem;
+  z-index: 5;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  @include mq(tablet_landscape) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: static;
+  }
+}
+
+.logo {
+  margin-left: 1.13rem;
+  height: 2.5rem;
+  width: 5.7rem;
+  @include mq(tablet_landscape) {
+    width: 7rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.hamburger-menu {
+  height: 1.25rem;
+  margin-right: 1.25rem;
+  width: 2rem;
+  @include mq(tablet_landscape) {
+    display: none;
+  }
+}
+.menu {
+  display: none;
+  @include mq(tablet_landscape) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu__item {
+  margin: 0rem 1rem;
+  &.sign-in {
+    border: 1px solid $text-black;
+    padding: .5rem;
+  }
+}

@@ -1,0 +1,95 @@
+.pilot {
+  background-color:  $lightgray;
+  padding-top: 5rem;
+  padding-right: 1rem;
+  @include mq(tablet_landscape) {
+    padding-top: 6.5rem;
+    padding-right: 0;
+    padding-bottom: 6rem;
+  }
+}
+
+.pilot__wrapper {
+  @include mq(tablet_landscape) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.pilot__main {
+  @include mq(tablet_landscape) {
+    width: 45%;
+  }
+}
+.pilot__form {
+  margin-bottom: 1.35rem;
+  input {
+    border: none;
+    width: 21rem;
+    margin-bottom: .4rem;
+  }
+  button {
+    padding: 1rem 0;
+    margin-top: .5rem;
+  }
+}
+
+.pilot__signup {
+  display: none;
+  @include mq(tablet_landscape) {
+    margin-top: -9rem;
+    padding: 4rem 2.25rem 4.5rem 2.25rem;
+    background-color: $mediumgray;
+    position: relative;
+    z-index: 10;
+    display: block;
+    h2 {
+      font-size: $font-size-medium;
+      font-weight: $font-weight-medium;
+      text-align: center;
+      margin-bottom: 2.35rem;
+    }
+  }
+}
+
+.pilot__member-link {
+  display: block;
+  font-weight: $font-weight-regular;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.pilot__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 6.8%;
+  h2 {
+    font-size: $font-size-medium;
+    font-weight: $font-weight-bold;
+    color: $text-black;
+  }
+  p {
+    padding-top: .5rem;
+  }
+}
+
+.pilot__img {
+  width: 50%;
+  margin: 2.88rem auto 3rem auto;
+  @include mq(tablet_landscape) {
+    width: 40%;
+    margin: 0 6.8%;
+    padding-top: 5.19rem;
+  }
+}
+
+.pilot__button {
+  width: 100%;
+  padding: 1rem 0;
+  @include mq(tablet_landscape) {
+    display: none;
+  }
+}
