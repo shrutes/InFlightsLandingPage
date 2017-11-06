@@ -453,7 +453,7 @@ a {
   text-decoration: none; }
 
 input {
-  font-weight: 400;
+  font-weight: 300;
   color: #192024;
   height: 3rem;
   padding-left: .75rem;
@@ -462,12 +462,16 @@ input {
   margin-bottom: .75rem;
   display: block; }
   input::-webkit-input-placeholder {
+    font-family: "Roboto", sans-serif;
     color: #798489; }
   input::-moz-placeholder {
+    font-family: "Roboto", sans-serif;
     color: #798489; }
   input:-moz-placeholder {
+    font-family: "Roboto", sans-serif;
     color: #798489; }
   input:-ms-input-placeholder {
+    font-family: "Roboto", sans-serif;
     color: #798489; }
 
 button {
@@ -810,7 +814,7 @@ img {
     .benefit__illustration {
       display: block;
       height: 20rem;
-      width: 20rem;
+      width: 22rem;
       margin-top: 3rem; } }
 
 .team {

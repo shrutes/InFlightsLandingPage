@@ -58,7 +58,7 @@ a {
 }
 
 input {
-  font-weight: $font-weight-regular;
+  font-weight: $font-weight-light;
   color: $text-black;
   height: 3rem;
   padding-left: .75rem;
@@ -67,7 +67,9 @@ input {
   margin-bottom: .75rem;
   display: block;
   @include placeholder {
+    font-family: $primary-font;
     color: $text-gray;
+
   };
 }
 
