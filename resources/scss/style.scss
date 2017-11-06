@@ -1,56 +1,9 @@
-$break-small: 470px;
-$break-large: 960px;
+@import 'normalize/import-now';
+@import 'partials/partials';
 
-@mixin mq($media) {
-  @if $media == mobile {
-    @media only screen and (max-width: $break-small) { @content; }
-  }
-  @else if $media == tablet {
-    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
-  }
-  @else if $media == desktop {
-    @media only screen and (min-width: $break-large) { @content; }
-  }
-}
 
-* {
-  box-sizing: border-box;
-}
-*:focus {
-    outline: 0;
-}
-html, body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-}
-
-button {
-  border: 0;
-  font-family: 'Roboto'
-}
-img {
-  width: 100%;
-}
-
-a {
-  text-decoration: none;
-}
-
-.mobile-linebreak {
-  @include mq(desktop) {
-    display: none;
-}
-}
-
-.container {
-  width: 100%;
-  @include mq(desktop) {
-    width: 960px;
-    margin: 0 auto;
-  }
-}
 .header {
-  background-color: #ffffff;
+  background-color: $white;
   height: 4.5rem;
   z-index: 5;
   position: fixed;
@@ -97,12 +50,10 @@ a {
 .menu__item {
   margin: 0rem 1rem;
   &.sign-in {
-    border: 1px solid #36474F;
+    border: 1px solid $text-black;
     padding: .5rem;
   }
 }
-
-
 
 .intro {
   padding-top: 7rem;
@@ -116,13 +67,12 @@ a {
   flex-direction: column;
   justify-content: space-between;
   margin: 0 6.8%;
-  color: #192024;
+  color: $text-black;
   padding-bottom: 2rem;
   h1 {
     font-size: 2rem;
-    font-weight: 300;
   }
-  h2 {
+  p {
     padding-top: .5rem;
     font-weight: bold;
     font-size: 1rem;
@@ -132,11 +82,11 @@ a {
   @include mq(desktop) {
     margin: 0;
     width: 34.7%;
-    background: white;
+    background: $white;
     position: absolute;
     z-index: 5;
     top: 9.63rem;
-    left: 14.1%;
+    left: 45%;
     padding: 1.5rem;
   }
 }
@@ -146,156 +96,32 @@ a {
 }
 
 .intro__signup_button {
-  background: #36474F;
-  color: #ffffff;
+  width: auto;
   position: absolute;
   padding: 0.69rem 2.56rem;
   bottom: 2.4rem;
   right: 1.31rem;
-  font-size: 0.875rem;
-  font-weight: 300;
-  letter-spacing: .35px;
+  letter-spacing: $spacing-medium;
   @include mq(desktop) {
     width: 20%;
-    bottom: 5.19rem;
-    left: 14.1%;
-    font-size: 1rem;
-    line-height: 2rem;
-    letter-spacing: .65px;
-    font-weight: 400;
-    width:16rem;
-  }
-}
-
-.pilot__form {
-  input {
-    z-index: 10;
-    font-family: "Roboto";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.31rem;
-    height: 3rem;
-    padding-left: .75rem;
-    margin-top: .25rem;
-    border: none;
-    width: 21rem;
-}
-   button {
-    font-size: 1rem;
-    font-weight: 400;
-    color: white;
-    width: 100%;
-    background: #36474F;
-    padding: 1rem 0;
-    margin-top: .5rem;
- }
-}
-
-.pilot__signup {
-  display: none;
-  @include mq(desktop) {
-    margin-top: -10rem;
-    padding: 4rem 2.25rem 4.5rem 2.25rem;
-    background-color: #D2D9DC;
-    position: relative;
-    z-index: 10;
-    display: block;
-    h2 {
-      font-size: 1.31rem;
-      font-weight: 500;
-      text-align: center;
-      color: #36474F;
-      margin-bottom: 2.35rem;
-    }
-    h3 {
-      font-size: 1rem;
-      font-weight: 500;
-      text-align: center;
-      color: #36474F;
-      margin-top: 1.35rem;
-      text-decoration:underline;
-    }
-  }
-}
-
-
-.pilot {
-  padding-top: 2rem;
-  @include mq(desktop) {
-    padding-top: 6.5rem;
-    padding-bottom: 6rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-}
-
-.pilot__main {
-  @include mq(desktop) {
-    width: 45%;
-  }
-}
-.pilot__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 0 6.8%;
-
-  h2 {
-    font-size: 1.5rem;
-    color: #192024;
-  }
-  p {
-    padding-top: .5rem;
-    font-weight: 300;
-    line-height: 1.5rem;
-    a {
-      color: #36474F;
-      font-weight: 400;
-    }
-  }
-}
-
-
-.pilot__img {
-  width: 50%;
-  margin: 2.88rem auto 3rem auto;
-  @include mq(desktop) {
-    width: 40%;
-    margin: 0 6.8%;
-    padding-top: 5.19rem;
-  }
-}
-
-.pilot__button {
-  width: 100%;
-  background: #36474F;
-  padding: 1rem 0;
-  font-size: 1.125rem;
-  color: #FFFFFF;
-  font-weight: 400;
-  @include mq(desktop) {
-    display: none;
+    bottom: 16%;
+    left: 45%;
+    width:21rem;
   }
 }
 
 .process {
   @include mq(desktop) {
-    background-color:  #F7FAFB;
-    margin: 1rem auto;
-    padding: 4rem 0 5.5rem 0;
+    padding: 4rem 0 10rem 0;
   }
 }
 
 .process__title {
-  color: #5F6C73;
-  font-size: 2rem;
-  font-weight: 400;
+  font-size: $font-size-large;
+  font-weight: $font-weight-regular;
   margin: 5rem auto 0 auto;
   text-align: center;
   @include mq(desktop) {
-    line-height: 2.69rem;
     text-align: left;
     margin: 0 auto;
   }
@@ -327,27 +153,118 @@ a {
     width: 55%;
     &.process__icon_submit {
       margin-top: .25rem;
-  }
+    }
   }
 }
 
 .process__text {
   margin-top: 1.5rem;
-  color:#192024;
-  font-weight: 500;
-  line-height: 1.31rem;
+  color:$text-black;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-medium;
+}
+
+.pilot__form {
+  input {
+    padding-left: .75rem;
+    margin-top: .25rem;
+    border: none;
+    width: 21rem;
+  }
+  button {
+    padding: 1rem 0;
+    margin-top: .5rem;
+  }
+}
+
+.pilot__signup {
+  display: none;
+  @include mq(desktop) {
+    margin-top: -9rem;
+    padding: 4rem 2.25rem 4.5rem 2.25rem;
+    background-color: $mediumgray;
+    position: relative;
+    z-index: 10;
+    display: block;
+    h2 {
+      font-size: $font-size-medium;
+      font-weight: $font-weight-medium;
+      text-align: center;
+      margin-bottom: 2.35rem;
+    }
+  }
+}
+
+.pilot__form {
+  margin-bottom: 1.35rem;
+}
+.pilot__member-link {
+  display: block;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.pilot {
+  background-color:  $lightgray;
+  padding-top: 2rem;
+  @include mq(desktop) {
+    padding-top: 6.5rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.pilot__wrapper {
+  @include mq(desktop) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.pilot__main {
+  @include mq(desktop) {
+    width: 45%;
+  }
+}
+.pilot__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 6.8%;
+  h2 {
+    font-size: $font-size-medium;
+    font-weight: $font-weight-bold;
+  }
+  p {
+    padding-top: .5rem;
+  }
+}
+
+.pilot__img {
+  width: 50%;
+  margin: 2.88rem auto 3rem auto;
+  @include mq(desktop) {
+    width: 40%;
+    margin: 0 6.8%;
+    padding-top: 5.19rem;
+  }
+}
+
+.pilot__button {
+  width: 100%;
+  padding: 1rem 0;
+  @include mq(desktop) {
+    display: none;
+  }
 }
 
 .benefit__title {
-  color: #36474F;
-  font-size: 2.25rem;
-  font-weight: 300;
+  font-size: $font-size-large;
   margin-top: 3.88rem;
   text-align: center;
-  line-height: 3rem;
   @include mq(desktop) {
-    font-size: 3.5rem;
-    line-height: 4.63rem;
+    font-size: $font-size-xlarge;
     margin-top: 6rem;
     margin-bottom: 3.88rem;
   }
@@ -383,27 +300,16 @@ a {
   flex-direction: column;
   justify-content: flex-start;
   width: 85%;
-  h3 {
-    color: #192024;
-    font-size: 1.13rem;
-    font-weight: 700;
-    line-height: 1.5rem;
-  }
   p {
-    color: #192024;
-    font-weight: 300;
-    line-height: 1.31rem;
     margin-top: .5rem;
     @include mq(desktop) {
-      font-size: 1.13rem;
       width: 65%;
-      line-height: 1.5rem;
     }
   }
 }
 
 .benefit__link {
-  color: #36474F;
+  color: $text-black;
   font-weight: 400;
 }
 
@@ -419,40 +325,39 @@ a {
 .team {
   width: 100%;
   @include mq(desktop) {
-  background-color: #F7FAFB;
-}
+    background-color: $lightgray;
+  }
 }
 .team__title {
-  color: #36474F;
-  font-size: 2rem;
-  font-weight: 300;
-  line-height: 2.69rem;
+  color: $text-black;
+  font-size: $font-size-large;
+  font-weight: $font-weight-light;
   text-align: center;
   margin: 3rem auto 1.5rem auto;
   @include mq(desktop) {
-    font-size: 3rem;
-    line-height: 4rem;
+    font-size: $font-size-large-desktop;
     padding-top: 5rem;
   }
 }
 
 .team__subtitle {
-  color: #192024;
-  font-size: 1.13rem;
+  font-size: $font-size-base-desktop;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-large;
+  color: $text-black;
   text-transform: uppercase;
-  font-weight: 700;
-  line-height: 1.5rem;
   text-align: center;
   margin-top: .75rem;
   @include mq(desktop) {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    margin-bottom: 3.19rem;
+    font-size: $font-size-medium;
+    line-height: $line-height-xlarge;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
   }
 }
 
 .team__members {
-   margin: 2.5rem auto 1.5rem auto;
+  margin: 2.5rem auto 1.5rem auto;
   @include mq(desktop) {
     display: flex;
     flex-direction: row;
@@ -473,28 +378,16 @@ a {
   padding-bottom: 2.88rem;
 }
 .team__member_name {
-  font-size: 1.25rem;
-  color: #192024;
-  font-weight: 700;
+  font-weight: $font-weight-bold;
 }
 
 .team__member_title {
   font-size: .75rem;
-  color: #192024;
 }
 
 .team__member_bio {
-  font-size: 1rem;
   padding-top: .75rem;
   padding-right: 2rem;
-  font-weight: 300;
-  line-height: 1.5rem;
-  a {
-    font-size: 1rem;
-    color: #36474F;
-    line-height: 1.5rem;
-    font-weight: 400;
-  }
 }
 
 .services {
@@ -509,31 +402,12 @@ a {
       width: 53%;
     }
     input {
-      &.text{
-            color: #36474F;
-      }
-      font-family: "Roboto";
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.31rem;
-      height: 3rem;
-      padding-left: .75rem;
-      border-radius: .13rem;
-      border: 1px;
-      border-style: solid;
       width: 88%;
-
     }
     .services__form_button {
       width: 100%;
-      background: #36474F;
       padding: 1rem 0;
       margin-top: 1rem;
-      font-size: 1.13rem;
-      text-transform: uppercase;
-      line-height: 1.31rem;
-      color: #FFFFFF;
-      font-weight: 400;
       @include mq(desktop) {
         width: 88%;
         margin: 0 auto;
@@ -556,30 +430,20 @@ a {
 }
 
 .services__title {
-  color: #36474F;
-  font-size: 2rem;
-  font-weight: 300;
-  line-height: 2.69rem;
+  font-size: $font-size-large;
   text-align: center;
   margin: 0 auto 1.5rem auto;
   @include mq(desktop) {
-    font-size: 3.5rem;
-    line-height: 4.63rem;
+    font-size: $font-size-xlarge;
     margin: 5rem auto 1rem auto;
   }
 }
 
 .services__subtitle {
-  color: #36474F;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.31rem;
+  font-size: $font-size-small;
+  font-weight: $font-weight-medium;
   text-align: center;
   padding-bottom: 1.31rem;
-  @include mq(desktop) {
-    font-size: 1.31rem;
-    line-height: 1.75rem;
-  }
 }
 
 
@@ -592,13 +456,13 @@ a {
     flex-direction: row-reverse;
     padding-top: 2.5rem;
     padding-bottom: 7rem;
-}
+  }
 }
 
 .footer {
   width: 100%;
   height: 2.75rem;
-  background-color: #EFF1F3;
+  background-color: $mediumgray;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -606,13 +470,10 @@ a {
     height: 4rem;
   }
   .copyright {
-    color: #192024;
     font-size: .5rem;
-    line-height: .63rem;
     font-weight: 300;
     @include mq(desktop) {
-      font-size: .88rem;
-      line-height: 1.19rem;
+      font-size: $font-size-small;
     }
   }
 }

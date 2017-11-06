@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  &:focus {
+      outline: 0;
+}
+}
+
+html {
+  font-family: $primary-font;
+  font-size: 100%;
+}
+
+body {
+  font-size: $font-size-base;
+  color: $text-black;
+  line-height: $line-height-medium;
+  @include mq(desktop) {
+    font-size: $font-size-base-desktop;
+  }
+}
+
+h1 {
+  font-size: $font-size-large-desktop;
+  font-weight: $font-weight-light;
+  margin: .5rem 0;
+}
+
+h3 {
+  font-size: $font-size-base-desktop;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-large;
+}
+
+h2 {
+  font-size: $font-size-large;
+  font-weight: $font-weight-light;
+  color: $text-blue;
+  @include mq(desktop) {
+  font-size: $font-size-xlarge;
+  }
+}
+
+p {
+  font-weight: $font-weight-light;
+  color: $text-black;
+  @include mq(desktop) {
+    line-height: $line-height-large;
+    }
+}
+
+a {
+  font-weight: $font-weight-light;
+  color: $darkgreen;
+  text-decoration: none;
+}
+
+input {
+  font-weight: $font-weight-regular;
+  color: $text-gray;
+  height: 3rem;
+  padding-left: .75rem;
+  border-radius: .13rem;
+  border: 1px solid;
+
+}
+
+button {
+  font-weight: $font-weight-regular;
+  color: $white;
+  background-color: $green;
+  border: 0;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  @include mq(desktop) {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+
+.mobile-only {
+  @include mq(desktop) {
+    display: none;
+}
+}
