@@ -454,13 +454,21 @@ a {
 
 input {
   font-weight: 400;
-  color: #798489;
+  color: #192024;
   height: 3rem;
   padding-left: .75rem;
   border-radius: .13rem;
-  border: 1px solid;
+  border: 1px solid #798489;
   margin-bottom: .75rem;
   display: block; }
+  input::-webkit-input-placeholder {
+    color: #798489; }
+  input::-moz-placeholder {
+    color: #798489; }
+  input:-moz-placeholder {
+    color: #798489; }
+  input:-ms-input-placeholder {
+    color: #798489; }
 
 button {
   font-weight: 400;
@@ -567,9 +575,10 @@ img {
         color: #192024; }
       .intro__text p {
         font-size: 1.125rem;
-        font-weight: 400;
+        font-weight: 300;
         line-height: 1.31rem;
-        color: #192024; } }
+        color: #192024;
+        letter-spacing: 0.02rem; } }
   @media only screen and (min-width: 1024px) {
     .intro__text {
       width: 43%;
@@ -581,7 +590,7 @@ img {
         color: #192024; }
       .intro__text p {
         font-size: 1.25rem;
-        font-weight: 400;
+        font-weight: 300;
         line-height: 1.75rem;
         color: #192024; } }
   @media only screen and (min-width: 1280px) {
@@ -664,11 +673,12 @@ img {
 .process__text {
   margin-top: 1.5rem;
   color: #192024;
-  font-weight: 500;
-  line-height: 1.31rem; }
+  font-weight: 300;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem; }
 
 .pilot {
-  background-color: #F7FAFB;
+  background-color: #CFD8DC;
   padding-top: 5rem;
   padding-right: 1rem; }
   @media only screen and (min-width: 960px) {
@@ -704,13 +714,13 @@ img {
     .pilot__signup {
       margin-top: -9rem;
       padding: 4rem 2.25rem 4.5rem 2.25rem;
-      background-color: #CFD8DC;
+      background-color: #F7FAFB;
       position: relative;
       z-index: 10;
       display: block; }
       .pilot__signup h2 {
         font-size: 1.5rem;
-        font-weight: 500;
+        font-weight: 400;
         text-align: center;
         margin-bottom: 2.35rem; } }
 
@@ -824,13 +834,15 @@ img {
   font-size: 1.125rem;
   font-weight: 700;
   line-height: 1.5rem;
+  letter-spacing: 0.04rem;
   color: #192024;
   text-transform: uppercase;
   text-align: center; }
   @media only screen and (min-width: 960px) {
     .team__subtitle {
-      font-size: 1.5rem;
-      line-height: 1.75rem; } }
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      letter-spacing: 0.04rem; } }
 
 .team__members {
   margin: 2.5rem auto 1.5rem auto; }
@@ -846,7 +858,7 @@ img {
   @media only screen and (min-width: 960px) {
     .team__member {
       width: 50%;
-      margin: 5.5% 4rem; } }
+      margin: 5.5% 6.5%; } }
 
 .team__text {
   padding-top: 1.5rem;
@@ -905,7 +917,8 @@ img {
       margin: 5rem auto 2rem auto; } }
 
 .services__subtitle {
-  font-weight: 500;
+  font-weight: 300;
+  letter-spacing: 0.02rem;
   color: #36474F;
   text-align: center;
   padding-bottom: 1.31rem; }

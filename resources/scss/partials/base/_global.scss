@@ -59,13 +59,16 @@ a {
 
 input {
   font-weight: $font-weight-regular;
-  color: $text-gray;
+  color: $text-black;
   height: 3rem;
   padding-left: .75rem;
   border-radius: .13rem;
-  border: 1px solid;
+  border: 1px solid $text-gray;
   margin-bottom: .75rem;
   display: block;
+  @include placeholder {
+    color: $text-gray;
+  };
 }
 
 button {

@@ -37,9 +37,10 @@
     }
     p {
       font-size: $font-size-base-laptop;
-      font-weight: $font-weight-regular;
+      font-weight: $font-weight-light;
       line-height: $line-height-medium;
       color: $text-black;
+      letter-spacing: $spacing-small;
     }
   }
   @include mq(laptop) {
@@ -53,7 +54,7 @@
     }
     p {
       font-size: 1.25rem;
-      font-weight: $font-weight-regular;
+      font-weight: $font-weight-light;
       line-height: 1.75rem;
       color: $text-black;
     }

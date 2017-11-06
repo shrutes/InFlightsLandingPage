@@ -49,6 +49,7 @@
 .process__text {
   margin-top: 1.5rem;
   color:$text-black;
-  font-weight: $font-weight-medium;
-  line-height: $line-height-medium;
+  font-weight: $font-weight-light;
+  line-height: $line-height-large;
+  letter-spacing: $spacing-small;
 }
